@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gowsik Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      color: #fff;
+      overflow-x: hidden;
+      backdrop-filter: blur(3px);
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.65);
+      z-index: -1;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      opacity: 0;
+      animation: slideUp 1.2s ease forwards;
+    }
+
+    .hero h2 {
+      font-size: 1.8rem;
+      margin-top: .5rem;
+      opacity: 0;
+      animation: slideUp 1.2s ease .4s forwards;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      max-width: 600px;
+      opacity: 0;
+      animation: slideUp 1.2s ease .8s forwards;
+    }
+
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; }}
+    @keyframes slideUp { from { transform: translateY(40px); opacity: 0; } to { transform: translateY(0); opacity: 1; }}
+
+    .scroll-down {
+      margin-top: 3rem;
+      opacity: 0;
+      animation: fadeIn 2s ease 1.6s forwards;
+      font-size: 1rem;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 4rem auto;
+      padding: 1rem;
+    }
+
+    .card {
+      background: rgba(0,0,0,0.55);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.6);
+      margin-bottom: 2rem;
+      backdrop-filter: blur(6px);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .project {
+      background: rgba(255,255,255,0.08);
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+      transition: transform .3s;
+    }
+    .project:hover {
+      transform: translateY(-8px);
+    }
+
+    .problem {
+      background: rgba(255,255,255,0.08);
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: rgba(0,0,0,0.55);
+      margin-top: 3rem;
+      backdrop-filter: blur(6px);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <h1>Gowsik Beeesma Shilesh</h1>
+    <h2>Java Full-Stack Developer</h2>
+    <p>Java | Spring Boot | Angular | TypeScript | PostgreSQL | Jenkins | Linux | Git | Jira | Bitbucket — 1.4 years of experience building scalable enterprise apps. Strong in DSA patterns like arrays, two‑pointers, linked lists, hash maps, sliding window, and currently exploring backtracking & dynamic programming.</p>
+    <div class="scroll-down">Scroll ↓</div>
+  </div>
+
+  <section id="projects">
+    <div class="card">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+
+        <div class="project">
+          <h3>Data Integration System (Excel → DB)</h3>
+          <p>• User uploads Excel in Swagger → backend parses & validates rows<br>• Checks duplicates and compares across multiple tables<br>• Saves clean data into structured tables</p>
+        </div>
+
+        <div class="project">
+          <h3>E‑Procure</h3>
+          <p>Procurement workflow automation improving approval flow, vendor interaction & transparency.</p>
+        </div>
+
+        <div class="project">
+          <h3>Chatbot (Google Dialogflow)</h3>
+          <p>Built an intelligent support assistant capable of smart conversational flows.</p>
+        </div>
+
+        <div class="project">
+          <h3>E‑Mentoring System (PHP)</h3>
+          <p>A student‑mentor management portal for scheduling, tracking & communication.</p>
+        </div>
+
+        <div class="project">
+          <h3>Virtual Hackathon Platform (PHP)</h3>
+          <p>Complete event system: registrations, team creation, submissions & evaluation.</p>
+        </div>
+
+        <div class="project">
+          <h3>Online Course Registration System</h3>
+          <p>Web platform allowing students to register for courses, manage schedules, and track enrollment seamlessly.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="dsa">
+    <div class="card">
+      <h2>DSA Progress</h2>
+
+      <div class="problem">
+        <h3>Arrays & Two‑Pointers</h3>
+        <p>Covered searching, optimizing, in‑place transformations & pointer‑driven traversal patterns.</p>
+      </div>
+
+      <div class="problem">
+        <h3>Linked List</h3>
+        <p>Reversal, cycle detection, merging, slow‑fast pointer techniques & structural operations.</p>
+      </div>
+
+      <div class="problem">
+        <h3>HashMap & ArrayList</h3>
+        <p>Efficient frequency mapping, lookups, duplicate handling & index‑based optimizations.</p>
+      </div>
+
+      <div class="problem">
+        <h3>Sliding Window</h3>
+        <p>Mastered fixed & variable window techniques for O(n) optimal solutions.</p>
+      </div>
+
+      <div class="problem">
+        <h3>Next Goals: Backtracking & DP</h3>
+        <p>Now moving into recursion tree exploration, memoization & optimal substructure patterns.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Gowsik Portfolio
+  </footer>
+
+</body>
+</html>
